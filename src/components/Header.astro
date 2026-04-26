@@ -1,0 +1,15 @@
+---
+const nav = [
+  { href: '/', label: '文章' },
+  { href: '/category/', label: '分类' },
+  { href: '/tag/', label: '标签' },
+  { href: '/about/', label: '关于' },
+];
+---
+
+<header class="site-header">
+  <a class="brand" href="/">Typecho Static</a>
+  <nav aria-label="主导航">
+    {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+</header>

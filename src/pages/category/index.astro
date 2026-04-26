@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCategories, getPublishedPosts } from '../../lib/posts';
+import { categoryUrl } from '../../lib/site';
+
+const posts = await getPublishedPosts();
+const categories = getCategories(posts);
+---
+
+<BaseLayout title="分类" description="全部文章分类。">
+  <section class="archive-header">
+    <p class="eyebrow">Categories</p>
+    <h1>分类</h1>
+    <p>按主题浏览文章。</p>
+  </section>
+  <ul class="archive-list">
+    {categories.map((category) => (
+      <li>
+        <a href={categoryUrl(category.name)}>
+          <span>{category.name}</span>
+          <small>{category.count} 篇</small>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

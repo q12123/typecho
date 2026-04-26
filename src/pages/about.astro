@@ -1,0 +1,17 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const pages = await getCollection('pages');
+const about = pages.find((page) => page.data.slug === 'about');
+
+if (!about) {
+  throw new Error('Missing src/content/pages/about.md');
+}
+
+const { Content } = await render(about);
+---
+
+<PageLayout title={about.data.title} description={about.data.description}>
+  <Content />
+</PageLayout>
