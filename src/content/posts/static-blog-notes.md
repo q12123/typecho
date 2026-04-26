@@ -24,3 +24,7 @@ draft: false
 ## 部署测试
 
 这是一段用于验证 Cloudflare Pages 部署链路的测试更新。更新文章后重新运行构建，确认首页、文章页、RSS 和 sitemap 都能同步反映最新内容。
+
+## 自动部署测试
+
+这一次更新用于验证 GitHub 自动部署流程：本地修改 Markdown 后提交并推送到 `main` 分支，Cloudflare Pages 会自动拉取代码、执行 `npm run build`，并把新的 `dist` 产物发布到 `site-001-typecho-static.pages.dev`。
