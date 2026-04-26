@@ -4,7 +4,7 @@ import { getCategories, getPublishedPosts, getTags } from '../lib/posts';
 import { absoluteUrl, categoryUrl, postUrl, tagUrl } from '../lib/site';
 
 export const GET: APIRoute = async ({ site }) => {
-  const base = site ?? new URL('https://typecho-static.pages.dev');
+  const base = site ?? new URL('https://site-001-typecho-static.pages.dev');
   const posts = await getPublishedPosts();
   const pages = await getCollection('pages');
   const urls = [

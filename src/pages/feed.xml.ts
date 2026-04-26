@@ -13,7 +13,7 @@ function escapeXml(value: string) {
 
 export const GET: APIRoute = async ({ site }) => {
   const posts = await getPublishedPosts();
-  const base = site ?? new URL('https://typecho-static.pages.dev');
+  const base = site ?? new URL('https://site-001-typecho-static.pages.dev');
   const items = posts
     .map((post) => {
       const url = absoluteUrl(postUrl(post.data.slug), base);

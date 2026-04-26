@@ -24,6 +24,12 @@ export const SITE_ID = 'site-001';
 - `astro.config.mjs` 里的 `site`
 - Cloudflare Pages 项目名
 
+当前 Cloudflare Pages 项目：
+
+```text
+site-001-typecho-static
+```
+
 ## 内容维护
 
 文章放在：

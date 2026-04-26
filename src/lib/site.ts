@@ -28,6 +28,6 @@ export function tagUrl(tag: string) {
 }
 
 export function absoluteUrl(path: string, site?: URL) {
-  const base = site ?? new URL('https://typecho-static.pages.dev');
+  const base = site ?? new URL('https://site-001-typecho-static.pages.dev');
   return new URL(path, base).toString();
 }
